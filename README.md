@@ -2,8 +2,8 @@
 
 * Roadmap Flutter GetX Mvvm/Mvc Architecture
 * What is MVVM/MVC Pattern/Architecture
-* Create Project, Add Pacakges and Directories with Purpose
-* Handle App APIs Exceptiions
+* Create Project, Add Packages and Directories with Purpose
+* Handle App APIs Exception
 * Handle APIs Response
 * Network API Services
 * Routes
