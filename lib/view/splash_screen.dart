@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:getx_mvvm_mvc_rest_apis/resources/assets/image_assets.dart';
-
-import '../resources/components/internet_excpetions_widget.dart';
-import '../resources/components/round_button.dart';
+import 'package:get/get.dart';
+import 'package:getx_mvvm_mvc_rest_apis/view_models/services/splash_services.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,13 +10,18 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  SplashServices splashServices = SplashServices();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    splashServices.isLogin();
+  }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Column(
-          children: [
-            RoundButton(onPress: (){},title: 'qwe',),
-          ],
-        ));
+    return  Scaffold(
+      backgroundColor: Colors.teal,
+      body: Center(child: Text('Welcome\nback'.tr,textAlign: TextAlign.center,),),
+    );
   }
 }
