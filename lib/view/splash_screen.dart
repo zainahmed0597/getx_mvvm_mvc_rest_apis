@@ -10,6 +10,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Splash Screen'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+    );
   }
 }
