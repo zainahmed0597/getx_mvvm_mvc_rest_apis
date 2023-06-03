@@ -1,11 +1,16 @@
 # GetX State Management With MVVM with REST APIs
 
-* Roadmap Flutter GetX Mvvm/Mvc Architecture
-* What is MVVM/MVC Pattern/Architecture
-* Create Project, Add Packages and Directories with Purpose
-* Handle App APIs Exception
-* Handle APIs Response
-* Network API Services
-* Routes
-
 - [Playlist: here](https://www.youtube.com/watch?v=hfdmghXpSWA)
+
+* [Project setup using MVVM/MVC Pattern/Architecture](https://youtu.be/-P-qNddXO00)
+* [Handle App APIs Exception](https://youtu.be/4x-WjK8kl0E)
+* [Handle APIs Response](https://youtu.be/cyv8mRqgHkg)
+* [Network API Services](https://youtu.be/QrDzQHzw13g)
+* [Routes](https://youtu.be/bWhrGR336zA)
+* [Utils](https://youtu.be/Hjsdumpjs30)
+* [App Strings & GetX Localization](https://youtu.be/Y4IAlNOhlmM)
+* [Assets & Fonts](https://youtu.be/RNOEE0ZZvnM)
+* [Reusable Components](https://youtu.be/jAkeRPZZbcU)
+* [Login View ](https://youtu.be/NqBfWAHTW_s)
+
+
