@@ -44,13 +44,17 @@ class _LoginViewState extends State<LoginView> {
                   TextFormField(
                     controller: loginVM.emailController.value,
                     focusNode: loginVM.emailFocusNode.value,
-                    validator: (value){
-                      if(value!.isEmpty){
+                    validator: (value) {
+                      if (value!.isEmpty) {
                         Utils.snackBar('email'.tr, 'enter_email'.tr);
                       }
+                      return null;
                     },
-                    onFieldSubmitted: (value){
-                      Utils.fieldFocusChange(context, loginVM.emailFocusNode.value, loginVM.passwordFocusNode.value);
+                    onFieldSubmitted: (value) {
+                      Utils.fieldFocusChange(
+                          context,
+                          loginVM.emailFocusNode.value,
+                          loginVM.passwordFocusNode.value);
                     },
                     decoration: InputDecoration(
                       hintText: 'email_hint'.tr,
@@ -64,13 +68,13 @@ class _LoginViewState extends State<LoginView> {
                     controller: loginVM.passwordController.value,
                     focusNode: loginVM.passwordFocusNode.value,
                     obscureText: true,
-                    validator: (value){
-                      if(value!.isEmpty){
-                        Utils.snackBar('password'.tr, 'enter_email'.tr);
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        Utils.snackBar('password'.tr, 'enter_password'.tr);
                       }
+                      return null;
                     },
-                    onFieldSubmitted: (value){
-                    },
+                    onFieldSubmitted: (value) {},
                     decoration: InputDecoration(
                       hintText: 'password_hint'.tr,
                       border: OutlineInputBorder(
@@ -82,14 +86,17 @@ class _LoginViewState extends State<LoginView> {
               ),
             ),
             const SizedBox(height: 40),
-            RoundButton(
-              width: 200,
-              title: 'login'.tr,
-              onPress: () {
-                if(_formKey.currentState!. validate()){
-
-                }
-              },
+            Obx(
+              () => RoundButton(
+                width: 200,
+                title: 'login'.tr,
+                loading: loginVM.loading.value,
+                onPress: () {
+                  if (_formKey.currentState!.validate()) {
+                    loginVM.loginApi();
+                  }
+                },
+              ),
             ),
           ],
         ),

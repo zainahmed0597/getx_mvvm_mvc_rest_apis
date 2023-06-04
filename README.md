@@ -11,6 +11,7 @@
 * [App Strings & GetX Localization](https://youtu.be/Y4IAlNOhlmM)
 * [Assets & Fonts](https://youtu.be/RNOEE0ZZvnM)
 * [Reusable Components](https://youtu.be/jAkeRPZZbcU)
-* [Login View ](https://youtu.be/NqBfWAHTW_s)
+* [Login View](https://youtu.be/NqBfWAHTW_s)
+* [Manage User Session](https://youtu.be/SmuOFgVM2Sg)
 
 

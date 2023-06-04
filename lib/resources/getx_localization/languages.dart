@@ -20,6 +20,8 @@ class Languages extends Translations {
               'We are unable to process your request. \nPlease try again',
           'Welcome\nback' : 'Welcome\nback',
           'login' : 'Login',
+          'login_successfully' : 'Login Successfully',
+          'error' : 'Error',
         },
         'ur_PK': {
           'name': 'زین احمد',
@@ -37,6 +39,8 @@ class Languages extends Translations {
               'ہم آپ کی درخواست پر کارروائی کرنے سے قاصر ہیں۔ \nبراہ کرم دوبارہ کوشش کریں۔',
           'Welcome\nback':'خوش آمدید',
           'login':'لاگ ان کریں',
+          'login_successfully' : 'کامیابی سے لاگ ان کریں۔',
+          'error' : 'خرابی',
         }
       };
 }
