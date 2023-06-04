@@ -1,4 +1,5 @@
 import 'package:getx_mvvm_mvc_rest_apis/resources/routes/routes.dart';
+import 'resources/colors/app_colors.dart';
 import 'resources/getx_localization/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,10 +17,10 @@ class MyApp extends StatelessWidget {
       title: 'GetX-MVVM',
       debugShowCheckedModeBanner: false,
       translations: Languages(),
-      locale: Locale('en','US'),
-      fallbackLocale: Locale('en','US'),
+      locale: const Locale('en', 'US'),
+      fallbackLocale: const Locale('en', 'US'),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColor.primaryColor),
         useMaterial3: true,
       ),
       getPages: AppRoutes.appRoutes(),

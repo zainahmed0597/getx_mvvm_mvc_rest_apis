@@ -7,15 +7,14 @@ import 'routes_name.dart';
 class AppRoutes {
   static appRoutes() => [
         GetPage(
-          name: RouteName.splashScreen,
-          page: () => SplashScreen(),
-          transition: Transition.rightToLeftWithFade,
-          transitionDuration: const Duration(milliseconds: 250)
-        ),GetPage(
-          name: RouteName.loginView,
-          page: () => LoginView(),
-          transition: Transition.rightToLeftWithFade,
-          transitionDuration: const Duration(milliseconds: 250)
-        ),
+            name: RouteName.splashScreen,
+            page: () => const SplashScreen(),
+            transition: Transition.rightToLeftWithFade,
+            transitionDuration: const Duration(milliseconds: 250)),
+        GetPage(
+            name: RouteName.loginView,
+            page: () => const LoginView(),
+            transition: Transition.rightToLeftWithFade,
+            transitionDuration: const Duration(milliseconds: 250)),
       ];
 }
