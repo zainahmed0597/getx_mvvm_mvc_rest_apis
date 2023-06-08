@@ -12,8 +12,8 @@
 * [Assets & Fonts](https://youtu.be/RNOEE0ZZvnM)
 * [Reusable Components](https://youtu.be/jAkeRPZZbcU)
 * [Login View](https://youtu.be/NqBfWAHTW_s)
-* 
 * [Manage User Session](https://youtu.be/SmuOFgVM2Sg)
+* 
 * [Get API GetX](https://youtu.be/CcmCQrwmYn4)
 * [Code Refactoring](https://youtu.be/kjzagYmMTlk)
 * [The END](https://youtu.be/HvPt1uWj9Ug)

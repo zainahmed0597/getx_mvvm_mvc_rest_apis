@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
-import 'package:getx_mvvm_mvc_rest_apis/data/app_exceptions.dart';
-import 'package:getx_mvvm_mvc_rest_apis/data/network/base_api_services.dart';
 import 'package:http/http.dart' as http;
+import '../app_exceptions.dart';
+import 'base_api_services.dart';
 
 class NetworkApiServices extends BaseApiServices {
   @override
@@ -32,9 +32,11 @@ class NetworkApiServices extends BaseApiServices {
     }
     dynamic responseJson;
     try {
-      final response = await http.post(Uri.parse(url),
-              body: data // (jsonEncode use for RAW form) (use 'data' when formData use case)
-                  )
+      final response = await http
+          .post(Uri.parse(url),
+              body:
+                  data // (jsonEncode use for RAW form) (use 'data' when formData use case)
+              )
           .timeout(const Duration(seconds: 10));
       responseJson = returnResponse(response);
     } on SocketException {
