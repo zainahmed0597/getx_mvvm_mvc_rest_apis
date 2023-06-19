@@ -27,15 +27,13 @@ class LoginViewModel extends GetxController {
       if (value['error'] == 'user not found') {
         Utils.snackBar('login'.tr, value['error']);
       } else {
-        UserModel userModel = UserModel(
-          token: value['token'], isLogin: true
-        );
-        userPreference.saveUser(userModel).then((value){
-          Get.toNamed(RouteName.homeView);
-        }).onError((error, stackTrace){
-
-        });
-        Utils.snackBar('login'.tr, 'login_successfully'.tr);
+        UserModel userModel = UserModel(token: value['token'], isLogin: true);
+        userPreference.saveUser(userModel).then((value) {
+          Get.toNamed(RouteName.homeView)!.then((value) {
+            Get.delete<LoginViewModel>();
+          });
+          Utils.snackBar('login'.tr, 'login_successfully'.tr);
+        }).onError((error, stackTrace) {});
       }
     }).onError((error, stackTrace) {
       loading.value = false;

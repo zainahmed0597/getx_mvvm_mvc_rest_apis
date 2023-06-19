@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_mvvm_mvc_rest_apis/resources/colors/app_colors.dart';
-import 'package:getx_mvvm_mvc_rest_apis/resources/components/round_button.dart';
-import 'package:getx_mvvm_mvc_rest_apis/utils/utils.dart';
+import 'package:getx_mvvm_mvc_rest_apis/view/login/widgets/input_password_widget.dart';
 import 'package:getx_mvvm_mvc_rest_apis/view_models/controller/login/login_view_model.dart';
+
+import 'widgets/input_button_widget.dart';
+import 'widgets/input_email_widget.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -41,62 +43,15 @@ class _LoginViewState extends State<LoginView> {
               key: _formKey,
               child: Column(
                 children: [
-                  TextFormField(
-                    controller: loginVM.emailController.value,
-                    focusNode: loginVM.emailFocusNode.value,
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        Utils.snackBar('email'.tr, 'enter_email'.tr);
-                      }
-                      return null;
-                    },
-                    onFieldSubmitted: (value) {
-                      Utils.fieldFocusChange(
-                          context,
-                          loginVM.emailFocusNode.value,
-                          loginVM.passwordFocusNode.value);
-                    },
-                    decoration: InputDecoration(
-                      hintText: 'email_hint'.tr,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-                  ),
+                  InputEmailWidget(),
                   const SizedBox(height: 16),
-                  TextFormField(
-                    controller: loginVM.passwordController.value,
-                    focusNode: loginVM.passwordFocusNode.value,
-                    obscureText: true,
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        Utils.snackBar('password'.tr, 'enter_password'.tr);
-                      }
-                      return null;
-                    },
-                    onFieldSubmitted: (value) {},
-                    decoration: InputDecoration(
-                      hintText: 'password_hint'.tr,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-                  ),
+                  InputPasswordWidget(),
                 ],
               ),
             ),
             const SizedBox(height: 40),
-            Obx(
-              () => RoundButton(
-                width: 200,
-                title: 'login'.tr,
-                loading: loginVM.loading.value,
-                onPress: () {
-                  if (_formKey.currentState!.validate()) {
-                    loginVM.loginApi();
-                  }
-                },
-              ),
+            LoginButtonWidget(
+              formKey: _formKey,
             ),
           ],
         ),
